@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+   #back-button {
+    display: block;
+    margin-top: 10px; /* Remove centering margin */
+    margin-left: 10px;
+    padding-top: 2px;
+    font-size: 16px;
+    background-color: #0ea8b9;
+    color: white;
+    border: 2px solid #d5c4bb;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    width: 150px;
+    height: 25px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#back-button:hover {
+    background-color: #046271;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5); /* Larger, darker shadow */
+}
+
+
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="slide">
+        <!-- Each item wrapped in an anchor tag with query parameter in href -->
+        <a href="tour.html?landmark=niagara" target="_blank" class="item" style="background-image: url('n.jpg');">
+            <div class="content">
+                <div class="name">Niagara</div>
+                <div class="des">Experience the majestic Niagara Falls with a breathtaking view!</div>
+                
+            </div>
+        </a>
+
+        <a href="tour.html?landmark=pyramid" target="_blank" class="item" style="background-image: url('pyramid.jpg');">
+            <div class="content">
+                <div class="name">Pyramid</div>
+                <div class="des">Explore the mysteries of the ancient Egyptian pyramids.</div>
+                
+            </div>
+        </a>
+
+        <a href="tour.html?landmark=greatwall" target="_blank" class="item" style="background-image: url('3.jpg');">
+            <div class="content">
+                <div class="name">Great Wall</div>
+                <div class="des">Walk along the historic Great Wall of China.</div>
+              
+            </div>
+        </a>
+
+        <a href="tour.html?landmark=tajmahal" target="_blank" class="item" style="background-image: url('taj.jpg');">
+            <div class="content">
+                <div class="name">Taj Mahal</div>
+                <div class="des">Visit the magnificent Taj Mahal, a symbol of love and beauty.</div>
+                
+            </div>
+        </a>
+
+        <a href="tour.html?landmark=eiffel" target="_blank" class="item" style="background-image: url('et.jpg');">
+            <div class="content">
+                <div class="name">Eiffel Tower</div>
+                <div class="des">Marvel at the iconic Eiffel Tower in the heart of Paris.</div>
+              
+            </div>
+        </a>
+
+        
+    </div>
+
+    <!-- Navigation buttons for the slide -->
+    <div class="button">
+        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+
+    </div>
+</div>
+<a href="iindex.html" id="back-button" style="position: absolute; left: 0;">Back to main page</a>
+
+<script src="new.js"></script>
+</body>
+</html>

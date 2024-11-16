@@ -1,0 +1,173 @@
+<html>
+<head>
+    <title>Virtual Tour of Famous Places</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style type="text/css">
+        .smoke {
+    position:absolute;
+    top:65%;
+    lefT:50%;
+    transform:translate(-50%,-50%);
+}
+
+.smoke ul {
+    margin:0;
+    padding:0;
+    display:flex;
+    
+}
+
+.smoke ul li {
+    list-style:none;
+   font-weight:bold;
+    letter-spacing:10px;
+    filter:blur(1px);
+    color:#fff;
+    font-size:40px;
+    display: inline-block;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.smoke ul:hover li {
+    animation: smoke 9s linear forwards;
+}
+
+
+@keyframes smoke {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+        opacity: 1;
+        filter:blur(1px);
+    }
+    100% {
+      transform: rotate(40deg) translateY(-200px);
+        opacity: 0;
+        filter:blur(30px);
+    }
+}
+
+.smoke ul li:nth-child(1){
+    animation-delay:0s
+}
+.smoke ul li:nth-child(2){
+    animation-delay:.4s
+}
+.smoke ul li:nth-child(3){
+    animation-delay:.8s
+}
+.smoke ul li:nth-child(4){
+    animation-delay:1.2s
+}
+.smoke ul li:nth-child(5){
+    animation-delay:1.6s
+}
+
+    </style>
+</head>
+<body>
+     <!-- Header and Navigation -->
+     <header>
+        <h1>Virtual Tour of Famous Places</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="new.html" target="_blank">Landmarks</a></li>
+
+                <li>
+                    <a href="#about">About the Landmarks</a>
+                    <ul id="submenu">
+                        <li><a href="eiffel.html">Eiffel Tower</a></li>
+                        <li><a href="pyr.html">Great Pyramid </a></li>
+                        <li><a href="wall.html">Great Wall of China</a></li>
+                        <li><a href="taj.html">Taj Mahal</a></li>
+                        <li><a href="nig.html">Niagara Falls</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="#contact">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section with Parallax Effect -->
+    <section id="home" class="parallax">
+        <div class="smoke" >
+            <ul>
+                <li>E</li>
+                <li>x</li>
+                <li>p</li>
+                <li>l</li>
+                <li>o</li>
+                <li>r</li>
+                <li>e</li>
+                
+                <li>&nbsp;</li> <!-- Space between words -->
+                
+                <li>i</li>
+                <li>c</li>
+                <li>o</li>
+                <li>n</li>
+                <li>i</li>
+                <li>c</li>
+                
+                <li>&nbsp;</li> <!-- Space between words -->
+                
+                <li>l</li>
+                <li>a</li>
+                <li>n</li>
+                <li>d</li>
+                <li>m</li>
+                <li>a</li>
+                <li>r</li>
+                <li>k</li>
+                <li>s</li>
+                
+                <li>&nbsp;</li> <!-- Space between words -->
+                
+                <li>v</li>
+                <li>i</li>
+                <li>r</li>
+                <li>t</li>
+                <li>u</li>
+                <li>a</li>
+                <li>l</li>
+                <li>l</li>
+                <li>y</li>
+            </ul>
+            
+        
+        </div>
+    </section>
+
+  
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <h2>Feedback</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" class="slide-button">Send Feedback</button>
+
+        </form>
+    </section>
+   
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Virtual Tour of Famous Places. All rights reserved.</p>
+        
+        <p>Proudly created and developed by 20011556-097, &nbsp;22011556-024, &nbsp;22011556-030, &nbsp;</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

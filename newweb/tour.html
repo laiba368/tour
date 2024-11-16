@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Tour</title>
+    <style>
+        body {
+            background-color: #73cada;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        h2, p {
+            text-align: center;
+            color: #046271;
+        }
+        #back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0ea8b9;
+    color: white;
+    border: 2px solid #d5c4bb;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    width: 160px;
+    height: 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#back-button:hover {
+    background-color: #046271;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5); /* Larger, darker shadow */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Back Button to return to the main page -->
+    <a href="new.html" id="back-button">Back to landmarks</a>
+    <h2>Take a Virtual Tour</h2>
+    <p>Explore the beauty of these landmarks with a 360-degree view below.</p>
+    <h2 id="tour-title">Tour</h2>
+    <div id="tour-iframe-container">
+        <!-- The iframe for the tour will be inserted here -->
+    </div>
+    
+    
+
+    <script>
+        // Extract the landmark from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const landmark = urlParams.get('landmark');
+        
+        // Define iframes based on landmarks
+        const tours = {
+            'eiffel': 'https://www.airpano.com/embed.php?3D=eiffel-tower-paris-france',
+            'greatwall': 'https://www.airpano.com/embed.php?3D=china-great-wall',
+            'pyramid': 'https://www.airpano.com/embed.php?3D=egypt-cairo-pyramids',
+            'niagara': 'https://www.airpano.com/embed.php?3D=niagara-falls-usa-canada',
+            'tajmahal': 'https://www.airpano.com/embed.php?3D=taj-mahal-india-2'
+        };
+
+        // Display the selected tour iframe
+        if (landmark && tours[landmark]) {
+            document.getElementById('tour-iframe-container').innerHTML = `
+                <iframe width="100%" height="550" src="${tours[landmark]}" frameborder="0" allowfullscreen></iframe>
+            `;
+            document.getElementById('tour-title').textContent = landmark.charAt(0).toUpperCase() + landmark.slice(1) + " Tour";
+        } else {
+            document.getElementById('tour-iframe-container').innerHTML = "<p>Tour not available.</p>";
+        }
+    </script>
+</body>
+</html>

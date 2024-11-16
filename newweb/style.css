@@ -1,0 +1,213 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative; /* Ensures the submenu is positioned relative to the parent */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Dropdown Menu */
+#submenu {
+    list-style-type: none;
+    position: absolute;
+    left: 0;
+    top: 100%; /* Position it below the parent */
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+#submenu li {
+    display: block;
+    width: 150px;
+}
+
+#submenu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+#submenu li a:hover {
+    background-color: #444;
+    color: #f39c12;
+}
+
+/* Show submenu on hover */
+nav ul li:hover #submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*.btn {
+    background-color: #f39c12;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d35400;
+}*/
+
+/* Parallax Section */
+.parallax {
+    background-image: url('3.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+}
+
+.parallax h2 {
+    font-size: 98px;
+    margin: 0;
+}
+
+
+
+/* Exhibit Section */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.exhibit-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.exhibit {
+    width: 300px;
+    margin: 20px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.exhibit img {
+    width: 300px; /* Adjust width */
+    height: 200px; /* Adjust height */
+    object-fit: cover; /* Ensures the image fits within the specified size */
+    border-radius: 8px; /* Optional, keeps rounded corners */
+}
+.exhibit h3 {
+    margin: 10px 0;
+}
+
+.exhibit:hover {
+    transform: translateY(-10px);
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+/* Contact Section */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.slide-button {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #0ea8b9;
+    border: none;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.slide-button:hover {
+    background-color: #046271;
+}
+
+.slide-button::before {
+    content: "Send Feedback";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 3s;
+    color: white;
+}
+
+.slide-button:hover::before {
+    left: 0;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
